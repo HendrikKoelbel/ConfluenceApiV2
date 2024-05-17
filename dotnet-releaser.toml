@@ -7,10 +7,10 @@
 
 # configuration file for dotnet-releaser
 [msbuild]
-project = "ConfluenceApi.sln"
+project = "ConfluenceApiV2.sln"
 [github]
 user = "HendrikKoelbel"
-repo = "ConfluenceApi"
+repo = "ConfluenceApiV2"
 version_prefix = "v"
 [nuget]
 source = "https://api.nuget.org/v3/index.json"

@@ -2,6 +2,9 @@
 ## Overview
 The Confluence API V2 Client is a .NET client for the Confluence REST API v2. It allows users to interact with their Confluence instance programmatically.
 
+## GitHub Action
+[![ci](https://github.com/HendrikKoelbel/ConfluenceApiV2/actions/workflows/ci.yml/badge.svg)](https://github.com/HendrikKoelbel/ConfluenceApiV2/actions/workflows/ci.yml)
+
 ## Installation
 To install the Confluence API V2 Client library, you can add the package to your project using the .NET CLI or the NuGet Package Manager.
 
