@@ -14,9 +14,11 @@
     <PackageTags>confluence;apiclient;sdk;restapi;v2</PackageTags>
     <AssemblyName>ConfluenceApiV2Client</AssemblyName>
     <Description>A .NET client for the Confluence REST API v2</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
-
+    
     <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\"/>
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
         <PackageReference Include="Refit" Version="7.0.0" />
         <PackageReference Include="Refit.HttpClientFactory" Version="7.0.0" />
