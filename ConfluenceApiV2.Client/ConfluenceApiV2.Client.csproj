@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net6.0;net7.0;net8.0</TargetFrameworks>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<Version>1.0.0</Version>
+	<Authors>HendrikKoelbel</Authors>
+	<Company>HendrikKoelbel</Company>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <Copyright>© HendrikKoelbel</Copyright>
+    <RepositoryUrl>https://github.com/HendrikKoelbel/ConfluenceApi</RepositoryUrl>
+    <PackageTags>confluence;apiclient;sdk;restapi;v2</PackageTags>
+    <AssemblyName>ConfluenceApiV2Client</AssemblyName>
+    <Description>A .NET client for the Confluence REST API v2</Description>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+        <PackageReference Include="Refit" Version="7.0.0" />
+        <PackageReference Include="Refit.HttpClientFactory" Version="7.0.0" />
+    </ItemGroup>
+</Project>

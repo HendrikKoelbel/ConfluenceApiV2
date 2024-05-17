@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfluenceApiV2.Client", "ConfluenceApiV2.Client\ConfluenceApiV2.Client.csproj", "{798308A0-6BA9-4E90-B199-9E6FB44A7E01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{038D43EF-2291-4098-B7B8-3EC3D8B29DA2}"
+	ProjectSection(SolutionItems) = preProject
+		Confluence-RestApi-v2-OpenApi-v3.json = Confluence-RestApi-v2-OpenApi-v3.json
+		Confluence-RestApi-v2-OpenApi-v3.refitter = Confluence-RestApi-v2-OpenApi-v3.refitter
+		dotnet-releaser.toml = dotnet-releaser.toml
+		.gitignore = .gitignore
+		README.md = README.md
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{798308A0-6BA9-4E90-B199-9E6FB44A7E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798308A0-6BA9-4E90-B199-9E6FB44A7E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798308A0-6BA9-4E90-B199-9E6FB44A7E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798308A0-6BA9-4E90-B199-9E6FB44A7E01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4182BF3B-824D-4038-BAF5-43584EA5BAFE}
+	EndGlobalSection
+EndGlobal

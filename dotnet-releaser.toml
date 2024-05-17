@@ -1,0 +1,18 @@
+## This is the default, creating all the OS/CPU/Packages listed on the front readme.md
+#profile = "default"
+## Setting `custom` will make no default packs. You need to configure them manually
+## profile = "custom"
+## Store the artifacts to `myfolder`
+#artifacts_folder = "myfolder"
+
+# configuration file for dotnet-releaser
+[msbuild]
+project = "ConfluenceApi.sln"
+[github]
+user = "HendrikKoelbel"
+repo = "ConfluenceApi"
+version_prefix = "v"
+[nuget]
+source = "https://api.nuget.org/v3/index.json"
+publish = true
+publish_draft = false
