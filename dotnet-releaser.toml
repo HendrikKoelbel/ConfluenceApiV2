@@ -16,3 +16,76 @@ version_prefix = "v"
 source = "https://api.nuget.org/v3/index.json"
 publish = true
 publish_draft = false
+
+[[changelog.autolabeler]]
+label = "breaking-change"
+title = '^[Bb]reaking\s+[Cc]hange'
+
+# Matches any title starting by e.g `Add/Improve/Fix/Update ci`
+# and attach to the PR/Commit the `maintenance` label
+[[changelog.autolabeler]]
+label = "maintenance"
+title = '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+ci\b'
+
+# Matches any title starting by e.g `Add/Improve/Fix/Update doc`
+# and attach to the PR/Commit the `documentation` label
+[[changelog.autolabeler]]
+label = "documentation"
+title = '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+[Dd]oc'
+
+# Matches any title starting by e.g `Add/Improve/Fix/Update test`
+# and attach to the PR/Commit the `tests` label
+[[changelog.autolabeler]]
+label = "tests"
+title = '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+[Tt]est'
+
+# Matches any title starting by e.g `Add/Improve/Fix/Update example`
+# and attach to the PR/Commit the `examples` label
+[[changelog.autolabeler]]
+label = "examples"
+title = '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+[Ee]xample'
+
+# Matches any title starting by e.g `Add/Improve/Fix/Update accessibility`
+# and attach to the PR/Commit the `accessibility` label
+[[changelog.autolabeler]]
+label = "accessibility"
+title = [
+    '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+[Aa]ccessibility',
+    '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+[Tt]ranslation',
+]
+
+# Matches any title starting by e.g `Fix/Bugfix`
+# and attach to the PR/Commit the `bugfix` label
+[[changelog.autolabeler]]
+label = "bugfix"
+title = '^(([Ff]ix)|([Bb]ugfix))'
+
+# Matches any title starting by e.g `Add`
+# and attach to the PR/Commit the `feature` label
+[[changelog.autolabeler]]
+label = "feature"
+title = '^([Aa]dd)\s+'
+
+# Matches any title starting by e.g `Enhance`
+# and attach to the PR/Commit the `enhancement` label
+[[changelog.autolabeler]]
+label = "enhancement"
+title = [
+    '^(([Ee]nhance)|([Rr]efactor))',
+    '^([Ii]mprove)\s+[Pp]erf'
+]
+
+# Matches any title starting by e.g `Add`
+# and attach to the PR/Commit the `dependencies` label
+[[changelog.autolabeler]]
+label = "dependencies"
+title = [
+    '^([Uu]pdate)\s+[Dd]epend',
+    '^([Bb]ump)\s+\w{3,}' # Don't match e.g `Bump to`
+]
+
+# Matches anything left that hasn't been matched by previous auto-labelers
+# and attach to the PR/Commit the `misc` label
+[[changelog.autolabeler]]
+label = "misc"
+title = '.' # Matches any characters
