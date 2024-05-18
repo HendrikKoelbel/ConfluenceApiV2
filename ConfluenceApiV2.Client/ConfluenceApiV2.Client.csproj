@@ -10,7 +10,7 @@
 	<LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <Copyright>© HendrikKoelbel</Copyright>
-    <RepositoryUrl>https://github.com/HendrikKoelbel/ConfluenceApi</RepositoryUrl>
+    <RepositoryUrl>https://github.com/HendrikKoelbel/ConfluenceApiV2</RepositoryUrl>
     <PackageTags>confluence;apiclient;sdk;restapi;v2</PackageTags>
     <AssemblyName>ConfluenceApiV2Client</AssemblyName>
     <Description>A .NET client for the Confluence REST API v2</Description>
