@@ -10,12 +10,12 @@ To install the Confluence API V2 Client library, you can add the package to your
 
 ### .NET CLI:
 ```
-dotnet add package ConfluenceApiV2Client --version 1.0.0
+dotnet add package ConfluenceApiV2Client
 ```
 
 ### NuGet Package Manager:
 ```
-Install-Package ConfluenceApiV2Client -Version 1.0.0
+Install-Package ConfluenceApiV2Client
 ```
 
 ### Supported .NET Versions
