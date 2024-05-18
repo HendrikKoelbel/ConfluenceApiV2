@@ -17,6 +17,7 @@ source = "https://api.nuget.org/v3/index.json"
 publish = true
 publish_draft = false
 
+[changelog]
 [[changelog.autolabeler]]
 label = "breaking-change"
 title = '^[Bb]reaking\s+[Cc]hange'

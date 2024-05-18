@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net6.0;net7.0;net8.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
     <Authors>HendrikKoelbel</Authors>
     <Company>HendrikKoelbel</Company>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -15,11 +14,17 @@
     <AssemblyName>ConfluenceApiV2Client</AssemblyName>
     <Description>A .NET client for the Confluence REST API v2</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <MinVerSkip Condition="'$(Configuration)' == 'Debug'">true</MinVerSkip>
   </PropertyGroup>
     
     <ItemGroup>
         <None Include="..\README.md" Pack="true" PackagePath="\"/>
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+        <PackageReference Include="MinVer" Version="5.0.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Refit" Version="7.0.0" />
         <PackageReference Include="Refit.HttpClientFactory" Version="7.0.0" />
     </ItemGroup>
