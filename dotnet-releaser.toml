@@ -18,6 +18,10 @@ publish = true
 publish_draft = false
 
 
+# Changelog
+[changelog]
+defaults = false
+
 # Changelog categories
 [[changelog.category]]
 title = "## 🚨 Breaking Changes"
