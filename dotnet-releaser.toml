@@ -17,76 +17,115 @@ source = "https://api.nuget.org/v3/index.json"
 publish = true
 publish_draft = false
 
-[changelog]
+
+# Changelog categories
+[[changelog.category]]
+title = "## 🚨 Breaking Changes"
+labels = ["breaking-change", "category: breaking-change"]
+order = 10
+
+[[changelog.category]]
+title = "## ✨ New Features"
+labels = ["new-feature", "feature", "category: feature"]
+order = 20
+
+[[changelog.category]]
+title = "## 🐛 Bug Fixes"
+labels = ["bugfix", "fix", "bug", "category: bug"]
+order = 30
+
+[[changelog.category]]
+title = "## 🚀 Enhancements"
+labels = ["enhancement", "refactor", "performance", "category: performance", "category: enhancement"]
+order = 40
+
+[[changelog.category]]
+title = "## 🧰 Maintenance"
+labels = ["maintenance", "ci", "category: ci"]
+order = 50
+
+[[changelog.category]]
+title = "## 🏭 Tests"
+labels = ["tests", "test", "category: tests"]
+order = 60
+
+[[changelog.category]]
+title = "## 🛠 Examples"
+labels = ["examples", "samples", "category: samples", "category: examples"]
+order = 70
+
+[[changelog.category]]
+title = "## 📚 Documentation"
+labels = ["documentation", "doc", "docs", "documentations", "category: documentation", "category: doc"]
+order = 80
+
+[[changelog.category]]
+title = "## 🌎 Accessibility"
+labels = ["translations", "accessibility", "category: accessibility"]
+order = 90
+
+[[changelog.category]]
+title = "## 📦 Dependencies"
+labels = ["dependencies", "deps", "category: dependencies"]
+order = 100
+
+[[changelog.category]]
+title = "## 🧰 Misc"
+labels = ["misc", "category: misc"]
+order = 110
+
+# Changelog auto-labelers
 [[changelog.autolabeler]]
 label = "breaking-change"
-title = '^[Bb]reaking\s+[Cc]hange'
+title = '^.*\b([Bb]reaking\s+[Cc]hange)\b.*$'
+# Example: "Breaking Change: API no longer supports v1 endpoints"
 
-# Matches any title starting by e.g `Add/Improve/Fix/Update ci`
-# and attach to the PR/Commit the `maintenance` label
 [[changelog.autolabeler]]
 label = "maintenance"
-title = '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+ci\b'
+title = '^.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*\b(ci)\b.*$|^.*\b(ci)\b.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*$'
+# Examples: "Add ci pipeline", "Fixed ci error", "Updated ci configuration", "ci updated to fix errors", "ci added to project"
 
-# Matches any title starting by e.g `Add/Improve/Fix/Update doc`
-# and attach to the PR/Commit the `documentation` label
 [[changelog.autolabeler]]
 label = "documentation"
-title = '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+[Dd]oc'
+title = '^.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*\b([Dd]oc|[Dd]ocs|[Dd]ocumentation|[Dd]ocumentations)\b.*$|^.*\b([Dd]oc|[Dd]ocs|[Dd]ocumentation|[Dd]ocumentations)\b.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*$'
+# Examples: "Added documentation for new feature", "Fixed typos in doc", "Updated README.md", "README.md updated in the documentation", "docs added to the project"
 
-# Matches any title starting by e.g `Add/Improve/Fix/Update test`
-# and attach to the PR/Commit the `tests` label
 [[changelog.autolabeler]]
 label = "tests"
-title = '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+[Tt]est'
+title = '^.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*\b([Tt]est|[Tt]ests)\b.*$|^.*\b([Tt]est|[Tt]ests)\b.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*$'
+# Examples: "Added unit tests", "Fixed test cases", "Updated test suite", "test suite improved", "tests added to the project"
 
-# Matches any title starting by e.g `Add/Improve/Fix/Update example`
-# and attach to the PR/Commit the `examples` label
 [[changelog.autolabeler]]
 label = "examples"
-title = '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+[Ee]xample'
+title = '^.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*\b([Ee]xample|[Ee]xamples)\b.*$|^.*\b([Ee]xample|[Ee]xamples)\b.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*$'
+# Examples: "Added usage examples", "Improved code examples", "Fixed example scripts", "example scripts added", "examples added to the project"
 
-# Matches any title starting by e.g `Add/Improve/Fix/Update accessibility`
-# and attach to the PR/Commit the `accessibility` label
 [[changelog.autolabeler]]
 label = "accessibility"
-title = [
-    '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+[Aa]ccessibility',
-    '^(([Aa]dd)|([Ii]mprove)|([Ff]ix)|([Uu]pdate))\s+[Tt]ranslation',
-]
+title = '^.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*\b([Aa]ccessibility|[Tt]ranslation|[Tt]ranslations)\b.*$|^.*\b([Aa]ccessibility|[Tt]ranslation|[Tt]ranslations)\b.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*$'
+# Examples: "Added accessibility features", "Updated translations", "Improved accessibility support", "translations added", "accessibility improved in the project"
 
-# Matches any title starting by e.g `Fix/Bugfix`
-# and attach to the PR/Commit the `bugfix` label
 [[changelog.autolabeler]]
 label = "bugfix"
-title = '^(([Ff]ix)|([Bb]ugfix))'
+title = '^.*\b(([Ff]ix|[Ff]ixed|[Bb]ugfix))\b.*$|^.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Uu]pdate|[Uu]pdated))\b.*\b([Bb]ugfix|[Bb]ug)\b.*$'
+# Examples: "Fixed a bug in authentication", "Bugfix: corrected null reference error", "authentication bug fixed", "bugfix added to project"
 
-# Matches any title starting by e.g `Add`
-# and attach to the PR/Commit the `feature` label
 [[changelog.autolabeler]]
 label = "feature"
-title = '^([Aa]dd)\s+'
+title = '^.*\b([Aa]dd|[Aa]dded)\b.*$|^.*\b(([Aa]dd|[Aa]dded))\b.*\b([Ff]eature|[Ff]eatures)\b.*$|^.*\b([Ff]eature|[Ff]eatures)\b.*\b(([Aa]dd|[Aa]dded))\b.*$'
+# Examples: "Added new endpoint for user data", "Add support for OAuth2", "new feature added", "feature added to project"
 
-# Matches any title starting by e.g `Enhance`
-# and attach to the PR/Commit the `enhancement` label
 [[changelog.autolabeler]]
 label = "enhancement"
-title = [
-    '^(([Ee]nhance)|([Rr]efactor))',
-    '^([Ii]mprove)\s+[Pp]erf'
-]
+title = '^.*\b(([Ee]nhance|[Rr]efactor|[Rr]efactored|[Ii]mprove|[Ii]mproved))\b.*\b([Pp]erformance|[Pp]erf|[Ee]nhancement|[Ee]nhancements)\b.*$|^.*\b([Pp]erformance|[Pp]erf|[Ee]nhancement|[Ee]nhancements)\b.*\b(([Ee]nhance|[Rr]efactor|[Rr]efactored|[Ii]mprove|[Ii]mproved))\b.*$'
+# Examples: "Enhanced logging", "Refactored authentication module", "Improved performance of data processing", "performance improvement added", "enhancements added to project"
 
-# Matches any title starting by e.g `Add`
-# and attach to the PR/Commit the `dependencies` label
 [[changelog.autolabeler]]
 label = "dependencies"
-title = [
-    '^([Uu]pdate)\s+[Dd]epend',
-    '^([Bb]ump)\s+\w{3,}' # Don't match e.g `Bump to`
-]
+title = '^.*\b([Uu]pdate|[Uu]pdated)\b.*\b([Dd]epend|[Dd]ependencies)\b.*$|^.*\b([Dd]epend|[Dd]ependencies)\b.*\b([Uu]pdate|[Uu]pdated)\b.*$|^.*\b([Bb]ump)\b.*\w{3,}.*$'
+# Examples: "Updated dependencies", "Bump version of Newtonsoft.Json", "dependencies updated", "dependencies updated in the project"
 
-# Matches anything left that hasn't been matched by previous auto-labelers
-# and attach to the PR/Commit the `misc` label
 [[changelog.autolabeler]]
 label = "misc"
-title = '.' # Matches any characters
+title = '.*'
+# Example: Any other commit message not matching the above patterns
