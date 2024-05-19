@@ -29,10 +29,13 @@ The library supports the following .NET versions:
 ### Reference Libraries
 The library requires the following NuGet packages:
 
-Microsoft.Extensions.DependencyInjection (Version 8.0.0)
-Refit (Version 7.0.0)
-Refit.HttpClientFactory (Version 7.0.0)
+- Microsoft.Extensions.DependencyInjection (Version 8.0.0)
+- Refit (Version 7.0.0)
+- Refit.HttpClientFactory (Version 7.0.0)
+
 These dependencies will be installed automatically when you add the ConfluenceApiV2Client package to your project.
+
+- Minver (version 5.0.0) - A minimalist .NET package for versioning .NET SDK-style projects using Git tags.
 
 ## Usage
 To use the Confluence API V2 Client, you need to authenticate with your Confluence instance using your email and API token.
