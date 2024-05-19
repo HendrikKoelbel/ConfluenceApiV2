@@ -26,3 +26,4 @@ jobs:
       run: |
         dotnet tool install --global dotnet-releaser --version 0.6.4
         dotnet-releaser run --nuget-token "${{secrets.CONFLUENCE_NUGET_TOKEN}}" --github-token "${{secrets.CONFLUENCE_GITHUB_TOKEN}}" ./dotnet-releaser.toml
+        dotnet-releaser changelog ./dotnet-releaser.toml
