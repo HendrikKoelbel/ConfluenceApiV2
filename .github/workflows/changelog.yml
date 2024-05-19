@@ -2,8 +2,7 @@ name: ci
 
 on:
   push:    
-    tags:
-      - changelog
+
         
 jobs:
   build:
