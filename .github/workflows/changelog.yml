@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:    
+    tags:
+      - changelog
+        
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install .NET 6.0
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Self Build - Publish (main only)
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          dotnet tool install --global dotnet-releaser --version 0.6.4
+          dotnet-releaser changelog ./dotnet-releaser.toml --update --github-token "${{secrets.CONFLUENCE_GITHUB_TOKEN}}"

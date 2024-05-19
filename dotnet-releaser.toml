@@ -82,7 +82,7 @@ title = '^.*\b([Bb]reaking\s+[Cc]hange)\b.*$'
 
 [[changelog.autolabeler]]
 label = "maintenance"
-title = '^.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*\b(ci)\b.*$|^.*\b(ci)\b.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*$'
+title = '^.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*\b(ci|CI)\b.*$|^.*\b(ci|CI)\b.*\b(([Aa]dd|[Aa]dded|[Ii]mprove|[Ii]mproved|[Ff]ix|[Ff]ixed|[Uu]pdate|[Uu]pdated))\b.*$'
 # Examples: "Add ci pipeline", "Fixed ci error", "Updated ci configuration", "ci updated to fix errors", "ci added to project"
 
 [[changelog.autolabeler]]
