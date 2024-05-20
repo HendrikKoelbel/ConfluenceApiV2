@@ -17,7 +17,6 @@ source = "https://api.nuget.org/v3/index.json"
 publish = true
 publish_draft = false
 
-
 # Changelog
 [changelog]
 defaults = false
