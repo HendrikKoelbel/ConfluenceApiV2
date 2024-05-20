@@ -15,15 +15,14 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Install .NET 6.0
+    - name: Install .NET 7.0
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '7.0.x'
 
     - name: Self Build - Publish (main only)
       if: github.event_name == 'push'
       shell: bash
       run: |
-        dotnet tool install --global dotnet-releaser --version 0.6.4
+        dotnet tool install --global dotnet-releaser --version 0.8.5
         dotnet-releaser run --nuget-token "${{secrets.CONFLUENCE_NUGET_TOKEN}}" --github-token "${{secrets.CONFLUENCE_GITHUB_TOKEN}}" ./dotnet-releaser.toml
-        dotnet-releaser changelog ./dotnet-releaser.toml
