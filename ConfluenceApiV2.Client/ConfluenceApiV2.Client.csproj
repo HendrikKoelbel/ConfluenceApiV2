@@ -6,8 +6,8 @@
     <Authors>HendrikKoelbel</Authors>
     <Company>HendrikKoelbel</Company>
     <ImplicitUsings>enable</ImplicitUsings>
-    <LangVersion>latest</LangVersion>
-    <Nullable>enable</Nullable>
+    <LangVersion>10</LangVersion>
+    <Nullable>disable</Nullable>
     <Copyright>© HendrikKoelbel</Copyright>
     <RepositoryUrl>https://github.com/HendrikKoelbel/ConfluenceApiV2</RepositoryUrl>
     <PackageTags>confluence;apiclient;sdk;restapi;v2</PackageTags>
