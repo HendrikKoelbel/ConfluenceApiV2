@@ -21,7 +21,6 @@ Install-Package ConfluenceApiV2Client
 ### Supported .NET Versions
 The library supports the following .NET versions:
 
-* **.NET Standard 2.0**
 * **.NET 6.0**
 * **.NET 7.0**
 * **.NET 8.0**
