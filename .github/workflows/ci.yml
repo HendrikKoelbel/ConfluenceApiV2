@@ -24,5 +24,5 @@ jobs:
       if: github.event_name == 'push'
       shell: bash
       run: |
-        dotnet tool install --global dotnet-releaser --version 0.8.5
+        dotnet tool install --global dotnet-releaser --version 0.12.0
         dotnet-releaser run --nuget-token "${{secrets.CONFLUENCE_NUGET_TOKEN}}" --github-token "${{secrets.CONFLUENCE_GITHUB_TOKEN}}" ./dotnet-releaser.toml
